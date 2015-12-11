@@ -21,7 +21,7 @@ public class TextEditor {
 		
 		do {
 			System.out.println("write the path: ");
-			filnamn = scan.next();
+			filnamn = "src/main/java/se/yh/java15/texteditor/" + scan.next();
 			
 			if (new File(filnamn).exists()) {
 				try {				
