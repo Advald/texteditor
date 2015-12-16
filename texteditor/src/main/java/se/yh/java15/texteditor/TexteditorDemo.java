@@ -9,6 +9,7 @@ public class TexteditorDemo {
 		textEditor.getPath();
 		System.out.println("");
 		textEditor.showMenu();
+		System.exit(0);
 
 	}
 

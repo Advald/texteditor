@@ -11,6 +11,9 @@ import java.util.Scanner;
 
 public class TextEditor {
 
+	
+		
+	
 	public void getPath() {
 		List<String> lines = new ArrayList<String>();
 		String line = null;
@@ -21,7 +24,7 @@ public class TextEditor {
 		
 		do {
 			System.out.println("write the path: ");
-			filnamn = "src/main/java/se/yh/java15/texteditor/" + scan.next();
+			filnamn = scan.next();
 			
 			if (new File(filnamn).exists()) {
 				try {				
@@ -97,15 +100,16 @@ public class TextEditor {
 		case "l":
 			break;
 		case "m":
+			showMenu();
 			break;
 		case "q":
-			String svar;
-			String svaret = "";
+			String svar1;
+			String svaret1 = "";
 			do{
 				System.out.println("Do you want to save changes? y/n ");
-				svar = sc.nextLine();
+				svar1 = sc.nextLine();
 				
-				switch (svar){
+				switch (svar1){
 				case "y":
 					//spara funktion
 					System.exit(0);	
@@ -115,14 +119,23 @@ public class TextEditor {
 					break;
 				}
 				
-			}while (svar.equals(svaret.toLowerCase()));
+			}while (svar1.equals(svaret1.toLowerCase()));
 			
 			break;
-		case "s":
+		case "s": 
+//			if (new File(filnamn).exists()){
+//			//spara filen på den sökväg som skrevs in
+//			FileWriter fw = new FileWriter(filnamn);
+//			fw.write(str);
+//		}else {
+//			//sparas
+//			System.out.println("filen sparades här:");
+//		}
 			break;
 		}
 		sc.close();
 	}
+	
 }
 
 
